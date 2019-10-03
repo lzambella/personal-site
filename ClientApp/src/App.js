@@ -7,6 +7,9 @@ import { Projects } from './components/Projects';
 
 export default class App extends Component {
   static displayName = App.name;
+  state = {
+    projects: []
+  }
 
   render () {
     return (
