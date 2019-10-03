@@ -5,6 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore.Sqlite;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.EntityFrameworkCore;
+using resume_app.Models;
 
 namespace resume_app
 {
@@ -21,7 +25,8 @@ namespace resume_app
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
+            services.AddDbContext<ProjectContext>(options =>
+                options.UseSqlite(Configuration.GetConnectionString("ProjectContext")));
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -52,15 +57,20 @@ namespace resume_app
                 routes.MapRoute(
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
+                routes.MapRoute(
+                    name: "API",
+                    template: "/api/{controller}/{id?}"
+                );
             });
 
+            // Hack to move the react app to its own path
             app.UseSpa(spa =>
             {
                 spa.Options.SourcePath = "ClientApp";
-
+                
                 if (env.IsDevelopment())
                 {
-                    spa.UseReactDevelopmentServer(npmScript: "start");
+                    spa.UseReactDevelopmentServer(npmScript: "start --base-href=/index/ --serve-path=/");
                 }
             });
         }

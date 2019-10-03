@@ -1,16 +1,16 @@
 /* Fix containers */
 html,body { 
-    height:100vh; 
     display: flex;
     flex-direction: column;
 }
 
 /* Background of the website */
-.background_color{
-    background: #393d3F;
-    height: 100%;
+.background_a{
+    background: #202020;
 }
-
+.background_b {
+    background: #222222
+}
 /* Forground of the website, elements should be centered and a lighter color than the background. */
 .forground{
 
@@ -30,4 +30,22 @@ html,body {
 
 .text-large {
     font-size: 125%
+}
+
+.transparent {
+    opacity: 0.8
+}
+
+a {
+    color: #e09f3e !important;
+    text-decoration: none;
+}
+
+.fix_footer {
+    min-height: 100vh
+}
+
+.banner {
+    height: 0.7vh;
+    width: 100vw
 }

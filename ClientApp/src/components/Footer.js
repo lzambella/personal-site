@@ -3,7 +3,7 @@ import "./NavMenu.css"
 export class Footer extends Component {
     render () {
         return (
-            <div class="bg-dark text-light border-top d-flex flex-fill justify-content-around text-large">
+            <div class="background_a text-light d-flex flex-fill justify-content-around text-large">
                 <div class="d-flex flex-row">
                     <div class="d-flex flex-column">
                         <h5 class="text-bold text-center border-bottom">Links</h5>

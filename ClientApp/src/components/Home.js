@@ -9,7 +9,7 @@ export class Home extends Component {
     return (
       
       <div>
-        <h1 class="text-center py-md-5 display-2 border-bottom">Welcome to my website!</h1>
+        <h1 class="text-center py-md-5 display-2 border-bottom">Welcome!</h1>
       
         <div class="px-md-5 text-large">
           <div>
