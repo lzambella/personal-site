@@ -10,8 +10,11 @@ function ProjectCard(project) {
             <div class="card-title">{project.Title}</div>
             <div class="card-subtitle">{project.StartDate}</div>
             <div class="card-text">{project.ShortDesc}</div>
-            <a href="#">More Info</a>
-            <a href={project.GithubLink}>GitHub Link</a>
+            {project.LongDesc.length > 0 ?
+            <a href="#">More Info</a> : null}
+            {project.GithubLink.length > 0 ?
+              <a href={project.GithubLink}>GitHub Link</a> : null}
+            
         </div>
     );
 }
@@ -50,8 +53,10 @@ export class Projects extends Component {
                     <div class="card-title text-light">{proj.title}</div>
                     <div class="card-subtitle">{proj.startDate}</div>
                     <div class="card-text">{proj.shortDesc}</div>
-                    <a href="#">More Info</a>
-                    <a href={proj.githubLink}>GitHub Link</a>
+                    {proj.longDesc == null ?
+                     null : <a href="#">More Info</a>}
+                    {proj.githubLink == null ?
+                     null : <a href={proj.githubLink}>GitHub Link</a>}
                 </div>
                 )
           });
@@ -65,12 +70,17 @@ export class Projects extends Component {
         return (
 
             <div>
-                <div class="display-2 border-bottom">Projects</div>
-                <div>Check out some of the projects I completed or are currently working on!</div>
-                    {this.state.projects ? this.state.projects : 
-                    <div>
-                        Test
-                    </div>}
+                <div class="text-center py-md-5 display-2 border-bottom">Projects</div>
+                <div class="px-md-5 text-large">
+                    <div>Check out some of the projects I completed or are currently working on! 
+                        Click on more info to view more information on the technologies and methodologies used in each one.</div>
+                    <p/>
+                    { this.state.projects ? this.state.projects : 
+                        <div>
+                            Loading...
+                        </div>
+                    }
+                </div>
            </div>
         )
     }

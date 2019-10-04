@@ -8,22 +8,28 @@ export class About extends Component {
     render() {
         return (
             <div>
-                <h1 class="text-center display-3 py-md-3 border-bottom">About this website</h1>
+                <h1 class="text-center py-md-5 display-2 border-bottom">About this website</h1>
+                <div class="px-md-5 text-large">
+                    <div>
+                        This website was made to refamiliarize and reinforce web development concepts including API programming. 
+                        The front-end uses the React framework with Bootstrap for layout. 
+                        It was chosen for it's ease of use and that many other websites are built using this framework, allowing for familiarity should I ever work on similiar projects.
+                        React uses Javascript and AJAX giving it a responsive look and feel for the modern web.
+                    </div>
+                    <p/>
+                    <div>
+                        The back-end is written in C# with ASP.NET Core and uses a database to store project and experience information. I chose C# since I was already familiar with the language having already made a few applications with it. 
+                        ASP.NET core is a cross-platform and open-source web framework for C# and it allows me to develop the app on Windows but easily deploy it to a cloud service using a Docker container running Linux.
+                        The entire code for the website is hosted on my GitHub page, where the hosting service automatically pulls any new commits and redeploys the entire app. This makes app updates completely seamless and quick. The website is database-driven for the projects page so I can easily add new projects should the time come. 
+                        There is an admin panel that uses authentication and it gives me the front-end tools to manage the database and its contents. With this, I have to consider all the security risks, such as input sanitization and XSS attacks. 
+                        Fortunately, the frameworks all have built in tools for this. 
+                    </div>
+                    <p/>
+                    <div>
+                        To view the code in its entirety, click the link <a href="https://github.com/lzambella/personal-site">here</a>.
+                    </div>
+                </div>
 
-                <p>This website was made to refamiliarize and reinforce web development concepts. 
-                    The front-end uses the React framework with Bootstrap for layout. It was chosen for it's ease of use and that many other websites are built using this framework, allowing for familiarity should I ever work on similiar projects.
-                    I had to learn Javascript, React, and Bootstrap as they all were new territory for me. 
-                </p>
-
-                <p>The back-end is written in C# with ASP.NET Core and uses a database to store project and experience information. I chose C# since I was already familiar with the language having already made a few applications with it. 
-                    ASP.NET core is a cross-platform and open-source web framework for C# and it allows me to develop the app on Windows but easily deploy it to a cloud service using a Docker container running Linux.
-                    The entire code for the website is hosted on my GitHub page, where the hosting service automatically pulls any new commits and redeploys the entire app. This makes app updates completely seamless and quick. The website is database-driven for the projects page so I can easily add new projects should the time come. 
-                    There is an admin panel that uses authentication and it gives me the front-end tools to manage the database and its contents. With this, I have to consider all the security risks, such as input sanitization and XSS attacks. 
-                    Fortunately, the frameworks all have built in tools for this. 
-                </p>
-                <p>
-                    To view the code in its entirety, click the link <a href="https://github.com/lzambella/personal-site">here</a>.
-                </p>
                 
             </div>
         )

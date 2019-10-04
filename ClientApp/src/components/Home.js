@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom"
 import { Skills } from '../Skills';
+import pdf from '../dat/zambella_resume.pdf';
+
 export class Home extends Component {
   static displayName = Home.name;
 
@@ -10,7 +12,7 @@ export class Home extends Component {
       
       <div>
         <h1 class="text-center py-md-5 display-2 border-bottom">Welcome!</h1>
-      
+        <h3 class="text-center py-md-5 text-bold"><a href={pdf}>Click here</a> to see my most up to date resume.</h3>
         <div class="px-md-5 text-large">
           <div>
             Hi there! My name is Luke and I'm a technology afficinado from the Jersey Shore. Currently, I study at The College of New Jersey pursuing a Bachelor of Science in Computer Engineering with a focus on robotics. 
@@ -25,9 +27,9 @@ export class Home extends Component {
           </div>
           <p/>
           <div>
-            To view more information about my completed and in-progress projects, <Link to="/projects">click here</Link> or click on "projects" in the top menu. 
+            My complete, most up to date resume can be found by clicking <a href={pdf}>here</a>. To view more information about my completed and in-progress projects, <Link to="/projects">click here</Link> or click on "projects" in the top menu. 
             More information about what this site runs on is located <Link to="/about">here</Link> or by clicking "About" in the top menu.
-            Otherwise, keep reading for a brief overview of my skills.
+            Otherwise, below is a quick overview of my skills.
           </div>
         </div>
         <p class="px-md-5"/>
