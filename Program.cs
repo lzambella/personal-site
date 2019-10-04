@@ -9,16 +9,21 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using resume_app.Models;
+using Newtonsoft.Json;
+
 namespace resume_app
 {
     public class Program
     {
+        public static string secret {get; set;}
         public static void Main(string[] args)
         {
+
             var host = CreateWebHostBuilder(args).Build();
 
             // Create and set up the database if it does not exist
             CreateDbIfNotExists(host);
+            LoadKey();
 
             host.Run();
         }
@@ -38,6 +43,21 @@ namespace resume_app
                     var logger = services.GetRequiredService<ILogger<Program>>();
                     logger.LogError(ex, "An error occurred creating the DB.");
                 }
+            }
+        }
+        private static void LoadKey() 
+        {
+            try {
+                using (StreamReader r = new StreamReader("./.key.json"))
+                {
+                    string json = r.ReadToEnd();
+                    dynamic key = JsonConvert.DeserializeObject(json);
+                    secret = key.API_KEY;
+                }
+            } catch (FileNotFoundException o) {
+                Console.Error.WriteLine("API password can not be found! Attempting env...");
+                // bad way of doing things
+                secret = Environment.GetEnvironmentVariable("API_KEY");
             }
         }
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
