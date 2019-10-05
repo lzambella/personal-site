@@ -82,7 +82,7 @@ export class Projects extends Component {
         return (
 
             <div>
-                <div class="text-center py-md-3 display-2 border-bottom">Projects</div>
+                <h2 class="text-center py-md-3 border-bottom">Projects</h2>
                 <div class="px-md-5 text-large">
                     <div>Check out some of the projects I completed or are currently working on! 
                         Click on more info to view more information on the technologies and methodologies used in each one.</div>

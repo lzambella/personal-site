@@ -11,7 +11,7 @@ export class Home extends Component {
     return (
       
       <div>
-        <div class="text-center py-md-3 display-2 border-bottom">Welcome</div>
+        <h2 class="text-center py-md-3 border-bottom">Welcome</h2>
         <div class="text-center py-md-3 text-large text-bold"><a href={pdf}>Click here</a> to see my most up to date resume.</div>
         <div class="px-md-5 text-large">
           <div>
@@ -32,7 +32,7 @@ export class Home extends Component {
             Otherwise, below is a quick overview of my skills.
           </div>
           <p/>
-          <div class="px-md-5 py-md-5">
+          <div class="py-md-5">
           <Skills/>
          </div>
          <p/>

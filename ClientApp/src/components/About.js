@@ -8,7 +8,7 @@ export class About extends Component {
     render() {
         return (
             <div>
-                <h1 class="text-center py-md-3 display-2 border-bottom">About this website</h1>
+                <h2 class="text-center py-md-3 border-bottom">About this website</h2>
                 <div class="px-md-5 text-large">
                     <div>
                         This website was made to refamiliarize and reinforce web development concepts including API programming. 
