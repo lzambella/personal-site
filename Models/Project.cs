@@ -16,6 +16,7 @@ namespace resume_app.Models {
         public DateTime StartDate {get; set;}
         public bool Completed {get; set;}
         public string GithubLink {get; set;}
+        public string PictureLink {get; set;}
 
     }
 }
