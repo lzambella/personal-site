@@ -11,46 +11,11 @@ export class Skills extends Component {
 
   render () {
       return (
-        <div class="d-flex justify-content-around">
-            <div class="flex-row">
-            <h3 class="text-center border-bottom">Software</h3>
-                <div class="flex-row">
-                <div>Visual Studio</div>
-                <div>Autodesk Inventor</div>
-                <div>Vivado</div>
-                <div>Git</div>
-                <div>GNU/Linux</div>
-                <div>Microsoft Office (Excel, Word)</div>
-                <div>Docker</div>
-                <div>ROS</div>
-                </div>
-            </div>
-            <div class="flex-row">
-            <h3 class="text-center border-bottom">Programming</h3>
-                <div class="flex-row">
-                <div>C#/.NET Core</div>
-                <div>Java</div>
-                <div>Javascript</div>
-                <div>C/C++</div>
-                <div>Verilog</div>
-                <div>Python</div>
-                <div>MATLAB, Simulink</div>
-                <div>OpenCV</div>
-                <div>Ruby, Rails</div>
-                <div>SQL</div>
-                </div>
-            </div>
-            <div class="flex-row">
-                <h3 class="text-center border-bottom">Hardware</h3>
-                <div class="flex-row">
-                <div>Oscilloscope</div>
-                <div>Breadboard Prototyping</div>
-                <div>Multimeter</div>
-                <div>FPGAs</div>
-                <div>Arduino, Teensy</div>
-                <div>Robotics</div>
-                </div>
-            </div>
+        <div class="">
+            <h2 class="text-center border-bottom">Technical Skills</h2>
+            <div class="border-bottom"><b>Software:</b> Visual Studio, IntelliJ, Eclipse, Linux, Git, Vivado, Microsoft Office, Inventor, Eagle, SolidWorks, Docker, Azure, AWS, EC3, Google Cloud</div>
+            <div class="border-bottom"><b>Programming Languages:</b> C#/.NET Core, ASP.NET, Java, Python, Ruby, Rails, YAML, HAML, NumPy, SciPy, OpenCV, C/C++, Verilog, SQL, MATLAB, Simulink, ROS, MVC, Agile, React, Javascript, HTML, CSS, REST, CRUD, API, XML, JSON, Node.js</div>
+            <div class="border-bottom"><b>Hardware:</b> Oscilloscope, Soldering, Breadboard, Arduino, FPGA, Robotics, Multimeter, Amplifier design, Circuits</div>
         </div>
       );
   }

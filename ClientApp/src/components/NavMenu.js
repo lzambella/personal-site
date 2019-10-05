@@ -24,10 +24,10 @@ export class NavMenu extends Component {
   render () {
     return (
       <header>
-        <Navbar className="text-large navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 background_a" light>
+        <Navbar className="navbar-dark text-large navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 background_a" light>
           <Container>
-            <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-            <Collapse className="d-sm-inline-flex flex-sm-row" isOpen={!this.state.collapsed} navbar>
+            <NavbarToggler onClick={this.toggleNavbar} className="mr-2 text-light" />
+            <Collapse className="d-sm-inline-flex flex-sm-row text-light" isOpen={!this.state.collapsed} navbar>
               <ul className="navbar-nav flex-grow">
                 <NavItem>
                   <NavLink tag={Link} className="text-light" to="/">Home</NavLink>

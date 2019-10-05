@@ -11,8 +11,8 @@ export class Home extends Component {
     return (
       
       <div>
-        <h1 class="text-center py-md-5 display-2 border-bottom">Welcome!</h1>
-        <h3 class="text-center py-md-5 text-bold"><a href={pdf}>Click here</a> to see my most up to date resume.</h3>
+        <div class="text-center py-md-3 display-2 border-bottom">Welcome</div>
+        <div class="text-center py-md-3 text-large text-bold"><a href={pdf}>Click here</a> to see my most up to date resume.</div>
         <div class="px-md-5 text-large">
           <div>
             Hi there! My name is Luke and I'm a technology afficinado from the Jersey Shore. Currently, I study at The College of New Jersey pursuing a Bachelor of Science in Computer Engineering with a focus on robotics. 
@@ -31,20 +31,20 @@ export class Home extends Component {
             More information about what this site runs on is located <Link to="/about">here</Link> or by clicking "About" in the top menu.
             Otherwise, below is a quick overview of my skills.
           </div>
-        </div>
-        <p class="px-md-5"/>
-        {/**
-         * Inject skills here
-         */}
-         <div class="py-md-3">
+          <p/>
+          <div class="px-md-5 py-md-5">
           <Skills/>
          </div>
-
-         <p class="py-md-2"/>
-         <div class="px-md-5 text-large py-md-2">
-           For professional inquiries, I can readily be contacted through E-mail at <a href="mailto:lukezambella@gmail.com">Luke.Zambella@gmail.com</a> or a message can be sent through either GitHub or LinkedIn.
+         <p/>
+         <div>
+           For professional inquiries, I can readily be contacted through E-mail at <a href="mailto:lukezambella@gmail.com">Lukezambella@gmail.com</a> or a message can be sent through either GitHub or LinkedIn.
          </div>
+        </div>
+
       </div>
     );
   }
 }
+/*
+
+*/

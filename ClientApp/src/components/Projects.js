@@ -49,14 +49,26 @@ export class Projects extends Component {
             // Only way I could make this work
           let projects = data.map(proj => {
             return (
-                <div class="card bg-dark" style={{width:'100%'}}>
+                <div class="card bg-dark text-center border-light" style={{width:'100%'}}>
+                    {
+                        proj.pictureLink == null ? null : 
+                        <img class="card-img-top border-bottom" src="" alt="Loading image..."/>
+                    }
                     <div class="card-title text-light">{proj.title}</div>
-                    <div class="card-subtitle">{proj.startDate}</div>
+                    <div class="card-subtitle">{
+                        // TODO: write a helper function to parse the full string as a date and format as needed
+                        proj.startDate.substring(0,10)
+                        }</div>
                     <div class="card-text">{proj.shortDesc}</div>
                     {proj.longDesc == null ?
-                     null : <a href="#">More Info</a>}
+                     null : 
+                        <button type="button" class="btn btn-outline-dark text-light" data-toggle="modal" data-target="#exampleModal">
+                            More Info
+                        </button>}
                     {proj.githubLink == null ?
-                     null : <a href={proj.githubLink}>GitHub Link</a>}
+                     null : 
+                     <a type="button" class="btn btn-ourline-dark" href={proj.githubLink}>Github Link</a>
+                        }
                 </div>
                 )
           });
@@ -70,7 +82,7 @@ export class Projects extends Component {
         return (
 
             <div>
-                <div class="text-center py-md-5 display-2 border-bottom">Projects</div>
+                <div class="text-center py-md-3 display-2 border-bottom">Projects</div>
                 <div class="px-md-5 text-large">
                     <div>Check out some of the projects I completed or are currently working on! 
                         Click on more info to view more information on the technologies and methodologies used in each one.</div>

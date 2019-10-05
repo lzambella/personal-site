@@ -8,7 +8,7 @@ export class About extends Component {
     render() {
         return (
             <div>
-                <h1 class="text-center py-md-5 display-2 border-bottom">About this website</h1>
+                <h1 class="text-center py-md-3 display-2 border-bottom">About this website</h1>
                 <div class="px-md-5 text-large">
                     <div>
                         This website was made to refamiliarize and reinforce web development concepts including API programming. 
@@ -19,10 +19,9 @@ export class About extends Component {
                     <p/>
                     <div>
                         The back-end is written in C# with ASP.NET Core and uses a database to store project and experience information. I chose C# since I was already familiar with the language having already made a few applications with it. 
-                        ASP.NET core is a cross-platform and open-source web framework for C# and it allows me to develop the app on Windows but easily deploy it to a cloud service using a Docker container running Linux.
-                        The entire code for the website is hosted on my GitHub page, where the hosting service automatically pulls any new commits and redeploys the entire app. This makes app updates completely seamless and quick. The website is database-driven for the projects page so I can easily add new projects should the time come. 
-                        There is an admin panel that uses authentication and it gives me the front-end tools to manage the database and its contents. With this, I have to consider all the security risks, such as input sanitization and XSS attacks. 
-                        Fortunately, the frameworks all have built in tools for this. 
+                        ASP.NET core is a cross-platform and open-source web framework for C# and it allows me to develop the app on Windows but easily deploy it to a cloud service.
+                        The entire code for the website is hosted on my GitHub page, where the hosting service automatically pulls any new commits and re-deploys the updated code. This makes app updates completely seamless and quick. The website is database-driven for the projects page so I can easily add new projects as i continue to create. 
+                        I use a custom desktop client software to manage the projects.
                     </div>
                     <p/>
                     <div>
