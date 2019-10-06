@@ -11,8 +11,8 @@ export class Home extends Component {
     return (
       
       <div>
-        <h2 class="text-center py-md-3 border-bottom">Welcome</h2>
-        <div class="text-center py-md-3 text-large text-bold"><a href={pdf}>Click here</a> to see my most up to date resume.</div>
+        <h1 class="text-center py-md-3 border-bottom">Welcome</h1>
+        <h3 class="text-center py-md-3 text-large text-bold"><a href={pdf}>Click here</a> to see my most up to date resume.</h3>
         <div class="px-md-5 text-large">
           <div>
             Hi there! My name is Luke and I'm a technology afficinado from the Jersey Shore. Currently, I study at The College of New Jersey pursuing a Bachelor of Science in Computer Engineering with a focus on robotics. 
