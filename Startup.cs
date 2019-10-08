@@ -14,6 +14,8 @@ namespace resume_app
 {
     public class Startup
     {
+        ///<summary>Database connection string for postgresql, gotten from an env variable</summary>
+        private string DatabaseString {get; set;}
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,8 +27,11 @@ namespace resume_app
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddDbContext<ProjectContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("ProjectContext")));
+            services.AddDbContext<ProjectContext>(options => {
+                // Get the connection key from an env variable
+                DatabaseString = System.Environment.GetEnvironmentVariable("DATABASE_KEY");
+                options.UseNpgsql(DatabaseString);
+            });
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
