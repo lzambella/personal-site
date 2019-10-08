@@ -20,7 +20,10 @@
                 "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"                
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                // These are for local development only, not production
+                "DATABASE_KEY" : "Host=localhost;Database=postgres;Username=LocalUser;Password=password",
+                "API_KEY": "000000"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
