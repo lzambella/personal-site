@@ -39,7 +39,9 @@ export class ProjectCard extends Component {
                 {this.props.proj.githubLink == null ?
                 null : 
                 <div class="py-2">
-                    <button type="button" class="btn btn-outline-light text-light py-md-2" href={this.props.proj.githubLink}>Github Link</button>
+                    <a href={this.props.proj.githubLink}>
+                        <button type="button" class="btn btn-outline-light text-light py-md-2" href={this.props.proj.githubLink}>Github Link</button>
+                    </a>         
                 </div>           
                     }
                 {this.props.proj.longDesc == null ?
