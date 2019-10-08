@@ -33,7 +33,10 @@ export class Projects extends Component {
             // Only way I could make this work
           let projects = data.map(proj => {
             return (
-                <ProjectCard proj={proj}/>
+                <div class="py-2">
+                    <ProjectCard proj={proj}/>
+                </div>
+                
                 )
           });
         this.setState({projects: projects});
