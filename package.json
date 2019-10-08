@@ -1,4 +1,9 @@
 {
   "private": true,
-  "workspaces": ["ClientApp"]
+  "workspaces": [
+    "ClientApp"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
 }
