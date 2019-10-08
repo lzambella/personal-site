@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import { NavMenu } from './NavMenu';
 import {Footer} from './Footer';
-
+import {Fade} from 'reactstrap'
 
 export class Layout extends Component {
   static displayName = Layout.name;
@@ -20,7 +20,7 @@ export class Layout extends Component {
             }
             <div class="d-flex bg-dark text-light border px-md-5 text-large transparent fix_footer" id="text-body">
               <Container>
-                  {this.props.children}
+                {this.props.children}
               </Container>
             </div>
           </div>

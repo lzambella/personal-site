@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
+import pdf from '../dat/zambella_resume.pdf';
 
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
@@ -37,6 +38,12 @@ export class NavMenu extends Component {
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} className="text-light" to="about">About</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="text-light" href={pdf}>Resume</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="text-light" href="mailto:lukezambella.com">Contact</NavLink>
                 </NavItem>
               </ul>
             </Collapse>
