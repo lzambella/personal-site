@@ -236,3 +236,11 @@ _Pvt_Extensions
 
 # API Key file
 .key.json
+
+# Launch Settings
+.vscode/*
+./.vscode/
+/.vscode/
+.vscode/launch.json
+launch.json
+tasks.json
