@@ -24,14 +24,14 @@ export class ProjectCard extends Component {
                 <div class="card bg-dark text-center border-light" style={{width:'100%'}}>
                 {
                     this.props.proj.pictureLink == null ? null : 
-                    <img class="card-img-top border-bottom" src="" alt="Loading image..."/>
+                    <img class="card-img-top border-bottom" src={this.props.proj.pictureLink}/>
                 }
                 <h2 class="card-title text-light border-bottom">{this.props.proj.title}</h2>
                 <div class="card-text">{
                     // TODO: write a helper function to parse the full string as a date and format as needed
                     "Start date: " + this.props.proj.startDate.substring(0,10)
                     }</div>
-                <div class="card-text">Writen with: {this.props.proj.technologies}</div>
+                <div class="card-text">Writen with: <i>{this.props.proj.technologies}</i></div>
                 <div class="card-text">{this.props.proj.shortDesc}</div>
                 <div>
                     
@@ -51,7 +51,7 @@ export class ProjectCard extends Component {
                             More Info
                         </button>
                         <Collapse isOpen={this.state.collapsed}>
-                            <div class="card-body">
+                            <div class="card-body text-left">
                                 {this.props.proj.longDesc}
                             </div>                                
                         </Collapse>

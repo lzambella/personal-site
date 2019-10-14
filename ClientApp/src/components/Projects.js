@@ -1,3 +1,6 @@
+/*
+*   Represents the /project page of the app, each project gets shown here.
+*/
 import React, { Component } from 'react';
 import {ProjectCard} from './ProjectCard'
 import {Fade} from 'reactstrap';
@@ -51,11 +54,11 @@ export class Projects extends Component {
                 <div>
                     <h1 class="text-center py-md-3 border-bottom">Projects</h1>
                     <div class="px-md-5 text-large">
-                        <div>Check out some of the projects I completed or are currently working on! 
-                            Click on more info to view more information on each project.</div>
+                        <div>These are some of the projects I've been working on! I have a wide variety of skills and each project showcases expertise in each one. Here, I give a quick rundown of what the project is about. 
+                            To see even more information on how it works, check out the GitHub repository if avaliable.</div>
                         <p/>
                         { this.state.projects ? this.state.projects : 
-                            <div class="text-center">
+                            <div class="text-center loader">
                                 Loading...
                             </div>
                         }
