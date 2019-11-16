@@ -31,6 +31,7 @@ namespace resume_app
                 // Get the connection key from an env variable
                 DatabaseString = System.Environment.GetEnvironmentVariable("DATABASE_KEY");
                 options.UseNpgsql(DatabaseString);
+                
             });
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
