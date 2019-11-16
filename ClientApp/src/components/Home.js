@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 import { Skills } from '../Skills';
 import pdf from '../dat/zambella_resume.pdf';
 import {Fade} from 'reactstrap'
-
+import {Updates} from './Updates'
 export class Home extends Component {
   static displayName = Home.name;
 
@@ -40,7 +40,10 @@ export class Home extends Component {
           <div>
             For professional inquiries, I can readily be contacted through E-mail at <a href="mailto:lukezambella@gmail.com">Lukezambella@gmail.com</a> or a message can be sent through either GitHub or LinkedIn.
           </div>
-          </div>
+        </div>
+        <div>
+          <Updates/>
+        </div>
 
         </div>
       </Fade>
